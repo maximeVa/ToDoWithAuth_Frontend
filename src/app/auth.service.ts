@@ -23,6 +23,16 @@ export class AuthService {
     );
   }
 
+  register(user: User): Observable<any> {
+    return this.http.post('/api/register', user)
+    .pipe(
+      tap((response: any) => {
+        // Handle successful registration response (optional)
+        // You can store tokens or user data here if needed
+      })
+    );
+  }
+
   logout(): void {
     this.authToken = '';
     this.currentUser = null;

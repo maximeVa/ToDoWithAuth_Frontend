@@ -9,7 +9,7 @@ import {catchError, throwError} from "rxjs"; // Importez le modèle d'utilisateu
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  user: User = { email: '', password: '' }; // Initialisez un utilisateur vide
+  user: User = { username: '', email: '', password: '' }; // Initialisez un utilisateur vide
 
   constructor(private authService: AuthService) {}
 
